@@ -36,6 +36,11 @@ Encore
 
     .enableReactPreset()
 
+
+    .configureBabel(function(babelConfig){
+        babelConfig.plugins.push("@babel/plugin-proposal-class-properties");
+    })
+
     /*
      * FEATURE CONFIG
      *

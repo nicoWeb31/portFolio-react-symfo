@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
         "@babel/preset-react": "^7.9.4",
         "@symfony/webpack-encore": "^0.30.0",
         "core-js": "^3.0.0",
@@ -15,8 +16,11 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "fs": "0.0.1-security",
+        "net": "^1.0.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^5.2.0",
+        "tls": "0.0.1"
     }
 }

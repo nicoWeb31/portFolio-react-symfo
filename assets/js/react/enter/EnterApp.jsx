@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../component/Header'
+import Header from '../component/Header';
+import MessageListe from '../component/MessageListe'
 
 class EnterApp extends Component {
     constructor(props) {
@@ -11,7 +12,9 @@ class EnterApp extends Component {
            
             <div className="container">
 
+               
                 <Header/>
+                <MessageListe/>
 
             </div>
 
