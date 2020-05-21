@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../component/Header';
-import MessageListe from '../component/MessageListe'
+import MessageListe from '../component/messages/MessageListe'
 
 class EnterApp extends Component {
     constructor(props) {

@@ -9,8 +9,8 @@ class Header extends Component {
     return (
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">
-            Navbar
+          <a className="navbar-brand text-bold text-danger" href="#">
+            Riot Nicolas
           </a>
           <button
             className="navbar-toggler"
@@ -25,10 +25,10 @@ class Header extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarColor03">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav d-flex justify-content-between w-100">
               <li className="nav-item active">
                 <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
+                  Acceuil
                 </a>
               </li>
               <li className="nav-item">
@@ -38,12 +38,12 @@ class Header extends Component {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Pricing
+                  Messages
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  About
+                  A Propos
                 </a>
               </li>
             </ul>
