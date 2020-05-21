@@ -1,0 +1,7 @@
+POST https://127.0.0.1:8000/api/add-message
+
+{
+    "name":"toto",
+    "email":"noisdf@free.fr",
+    "content":"sldkfjsodifusdoifusdkdkdksdfh"
+}
