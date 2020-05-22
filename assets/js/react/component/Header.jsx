@@ -1,4 +1,12 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+
+const home = <FontAwesomeIcon icon={faHome} />
+const env = <FontAwesomeIcon icon={faEnvelope} />
+
+
 
 class Header extends Component {
   constructor(props) {
@@ -8,47 +16,37 @@ class Header extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand text-bold text-danger" href="#">
-            Riot Nicolas
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarColor03"
-            aria-controls="navbarColor03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+      <div className="container-fluid m-0 p-0 ">
 
-          <div className="collapse navbar-collapse" id="navbarColor03">
-            <ul className="navbar-nav d-flex justify-content-between w-100">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Acceuil
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Messages
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  A Propos
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+              <nav class="navbar navbar-expand-lg navbar-dark bg-ligth ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <div class="collapse navbar-collapse _navBar" id="navbarColor01">
+          <ul class="navbar-nav w-100">
+
+            <li class="nav-item  mr-auto pl-5 ">
+    <a class="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4" href="#"> {home} <span className="mx-3">Acceuil</span></a>
+            </li>
+
+            <li class="nav-item  mx-auto pl-5 ">
+              <h2 class=" h2 text-bold text-dark">R-N-Dev-Web</h2>
+            </li>
+
+            <li class="nav-item ml-auto pr-5 d-flex align-items-center">
+              <a class="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4" href="">{env} <span className="mx-3">Contact</span></a>
+            </li>
+            {/* <li class="nav-item">
+              <a class="nav-link" href="#">Message</a>
+            </li> */}
+          </ul>
+
+        </div>
+      </nav>
+
+      </div>
+      <hr class="mt-1 mb-5 bg-dark shadow w-75" />
       </>
     );
   }
