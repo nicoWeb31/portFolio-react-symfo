@@ -8,7 +8,7 @@ class Message extends Component {
     render() {
         return (
             <li>
-                Message : {this.props.message.id } de : {this.props.message.name } --{this.props.message.email}
+                Message : {this.props.message.id } de : {this.props.message.name } -- {this.props.message.email}
                 <p>Contenu :
                 {this.props.message.content}
                 </p>
