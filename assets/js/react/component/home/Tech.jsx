@@ -77,9 +77,9 @@ class Tech extends Component {
             <div className="row">
                 <div className='col'></div>
                 <div className="col-10 d-flex justify-content-between">
-                    <img src="build/img/react.png"  style={stylePhoto} alt="logo_react"/>
-                    <img src="build/img/symfony_white_03.png" alt="logo_symfo" style={stylePhoto} />
-                    <img src="build/img/angu_ok.png" alt="ogo_angu" style={stylePhoto}/>
+                    <img src="img/react.png"  style={stylePhoto} alt="logo_react"/>
+                    <img src="img/symfony_white.png" alt="logo_symfo" style={stylePhoto} />
+                    <img src="img/angu_ok.png" alt="ogo_angu" style={stylePhoto}/>
                 </div> 
                 <div className='col'></div>
             </div>

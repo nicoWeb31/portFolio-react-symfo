@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Spinner from "../utils/Spinner"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus,faMinus } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,7 +13,8 @@ class Presentation extends Component {
     super(props);
     this.state = {
       showplus:false,
-      hover:false
+      hover:false,
+      laodind:false
     };
   }
 
@@ -20,11 +22,16 @@ class Presentation extends Component {
 
   //show plus
   showPlus =()=>{
-    console.log('showplus ok')
-    this.setState({
-      showPlus : !this.state.showPlus,
-
-    })
+    //console.log('showplus ok')
+    this.setState({ laodind: true });
+    
+    setTimeout(() => {
+      this.setState({ 
+        showPlus : !this.state.showPlus,
+        laodind: false });
+        
+    }, 300);
+    
   }
 
   //hover
@@ -76,7 +83,7 @@ class Presentation extends Component {
             <div className="row">
               <div className="col-3">
                 <img
-                  src="/build/img/photomeComp1.jpg"
+                  src="/img/photomeComp1.jpg"
                   className="w-100 img-fluid"
                   alt=""
                   style={photoStyle}
@@ -87,7 +94,7 @@ class Presentation extends Component {
                 <h1 className="display-4 text-center" >
                   Développeur full stack --- junior{" "}
                 </h1>
-                <p class="lead">
+                <p className="lead">
                   Actuellement en formation développeur web/php à l'Adrar de
                   Ramonville. Formation diplômante de niveau III (bac +2), plus
                   Openclassroom et autres.
@@ -96,18 +103,19 @@ class Presentation extends Component {
 
                 <p className="lead">
                 {this.state.showPlus ? (
-                  <button className="btn btn-dark btn-lg" onClick={this.showPlus}>Moins {less}</button>
 
+                  <button className="btn btn-dark btn-lg" onClick={this.showPlus}>Moins {less}</button>
+                  
                 ):
                 (
-                <button className="btn btn-dark btn-lg" onClick={this.showPlus}>Plus {plus}</button>
+                <button className="btn btn-dark btn-lg d-block" onClick={this.showPlus}>Plus {plus}</button>
                 )
                 }
-
-
-
-
                 </p>
+                <Spinner laodind={this.state.laodind}/>
+                
+
+
               </div>
             </div>
         {/* show plus true */}
