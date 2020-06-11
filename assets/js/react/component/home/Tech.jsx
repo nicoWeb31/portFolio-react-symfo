@@ -1,6 +1,8 @@
 import React, { Component,Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus,faMinus } from '@fortawesome/free-solid-svg-icons';
+import  PlusCompTech  from './PlusCompTech';
+import Spinner from "../utils/Spinner"
 
 
 const plus = <FontAwesomeIcon icon={faPlus} />
@@ -13,19 +15,25 @@ class Tech extends Component {
         super(props);
         this.state = {
             showplus:false,
-            hover:false
+            hover:false,
+            laodind:false
         };
     }
 
 
-     //show plus
-    showPlus =()=>{
-    console.log('showplus ok')
-    this.setState({
-    showPlus : !this.state.showPlus,
-
-    })
-    }
+ //show plus
+ showPlus =()=>{
+  //console.log('showplus ok')
+  this.setState({ laodind: true });
+  
+  setTimeout(() => {
+    this.setState({ 
+      showPlus : !this.state.showPlus,
+      laodind: false });
+      
+  }, 300);
+  
+}
 
 
 
@@ -63,6 +71,8 @@ class Tech extends Component {
         return (
 
     <Fragment>
+      
+      
         <div className="container p-4" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={linkBorder}>
           <h1 className="text-center">“Compétence / Tecno”</h1>
 
@@ -92,8 +102,10 @@ class Tech extends Component {
 
                 <h1 className="display-6 text-center"></h1>
                 <p className="lead">En plus de continuer a me former au standard " html,css,et js," je developpe des compentences sur Symfony, React,et Angular</p>
+                <p>J'ai un reel interét pour les stacks full js, avec des notions de node, et mongodb </p>
                 <hr className="mx-auto bg-info" />
                 
+                <p className="lead">
                 {this.state.showPlus ? (
                   <button className="btn btn-dark btn-lg" onClick={this.showPlus}>Moins {less}</button>
 
@@ -102,6 +114,10 @@ class Tech extends Component {
                 <button className="btn btn-dark btn-lg" onClick={this.showPlus}>Plus {plus}</button>
                 )
                 }
+                </p>
+                <Spinner laodind={this.state.laodind}/>
+
+
 
 
                 <div className="col-2"></div>
@@ -113,29 +129,9 @@ class Tech extends Component {
 
 {/* show plus true */}
 {this.state.showPlus &&
-
-<div className="row">
-  <div className="col-9 pt-5">
-    <h5>Qui-suis-je ?</h5>
-
-    <p>En reconversion depuis plus d'un ans et fort de plusieur année d'experience dans linux, je me suis lancer le defis de decouvrir
-    le vaste monde du web, autodidacte et interessé pas plein de domaine j'ai jetter mon devollu sur un dommaine qui m'a toujours semblé inaccessible </p>
-
-  </div>
-  <div className="col-3">
-      <div className="card border-danger mb-3">
-    <div className="card-header">Cominge - HauteGaronne </div>
-    <div className="card-body">
-      <h4 className="card-title">Riot - Nicolas</h4>
-      <p className="card-text">37 ans, centre d'interet : Sport de montagne,bricolage,veille techno, linux, etc...</p>
-    </div>
-    </div>
-
-  </div>
-
-</div>
-
+  <PlusCompTech/>
 }
+
 
 
             </div>
