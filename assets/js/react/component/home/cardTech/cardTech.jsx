@@ -15,17 +15,17 @@ class CardTech extends Component {
 
         return (
             <Fragment>
-            <div className="col-3">
+
                         
             <div className="card border-warning mb-3" style={cardStyle} >
         <div className="card-header text-center text-white" style={{backgroundColor: this.props.bg}}>{this.props.level}</div>
                 <div className="card-body bg-secondary">
                     <img src={this.props.name} alt="" className='d-block mx-auto ' width="auto"/>
                 {/* <h4 className="card-title text-center">{this.props.name}</h4> */}
-        <p className="card-text text-center pt-4">{this.props.autre}</p>
+        <p className="card-text text-center pt-4" >{this.props.autre}</p>
                 </div>
             </div>
-            </div>
+
 
 
             </Fragment>
