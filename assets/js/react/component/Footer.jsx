@@ -13,16 +13,43 @@ class Footer extends Component {
             fontFamily:" Lato",
             fontSize: "60px",
             textAlign: "center",
-            marginTop: "50px",
-          };
+
+        };
+
+        const text2 = {
+            color: "#424242",
+            fontFamily: "Lato",
+            fontSize: "20px",
+            textAlign: "center",
+
+        }
+
+        const text3 =  {
+            color: "#424242",
+            fontFamily: "Lato",
+            fontSize: "20px",
+            textAlign: "center",
+
+
+        }
+          
+        const red ={ 
+            borderTop: "solid #A44B4B",
+            borderWidth: "15px",
+            background: "#2E2E2E", 
+            bottom:"0",
+            height:"100%",
+            width:"100%"
+
+          }
 
 
 
         return (
-            <footer id="red">
-            <h1 style={text}>DMC</h1>
-            <h2 class="text2">&copy;	DIMENSIONMC - DESIGNED BY DEN & FLASH</h2>
-            <h2 class="text3">-POWERED BY ENJIN-</h2>
+            <footer style={red}>
+            <h2 style={text}>Devkgire</h2>
+            <h3 style={text2}>&copy;	DIMENSIONMC - DESIGNED BY RN</h3>
+            <h4 style={text3}>© Copyright 2020 - Riot Nicolas</h4>
             </footer>
         );
     }

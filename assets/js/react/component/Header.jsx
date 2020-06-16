@@ -14,6 +14,16 @@ class Header extends Component {
     this.state = {};
   }
   render() {
+
+    const text = {
+      color: "#424242",
+      fontFamily:" Lato",
+      fontSize: "60px",
+      textAlign: "center",
+
+  };
+
+
     return (
       <>
       <div className="container-fluid m-0 p-0 ">
@@ -31,7 +41,7 @@ class Header extends Component {
             </li>
 
             <li className="nav-item  mx-auto pl-5 ">
-              <h2 className=" h2 text-bold text-dark">R-N-Dev-Web</h2>
+              <h2 className=" h2 text-bold text-dark" style={text} >Devkgire</h2>
             </li>
 
             <li className="nav-item ml-auto pr-5 d-flex align-items-center">

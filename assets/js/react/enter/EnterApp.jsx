@@ -16,7 +16,9 @@ class EnterApp extends Component {
 
                
                 <Header/>
+                
                 <Home/>
+
                 <Footer/>
                 {/* <MessageListe/> */}
 
