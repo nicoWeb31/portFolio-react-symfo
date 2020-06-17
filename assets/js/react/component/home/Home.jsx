@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Presentation from './Presentation';
 import Tech from './Tech';
+import Realisation from './Realisation'
 
 
 
@@ -32,8 +33,11 @@ class Home extends Component {
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
             <Tech />
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
-
+            <Realisation/>
+            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+            
             </>
+            
         );
     }
 }
