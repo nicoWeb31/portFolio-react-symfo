@@ -12,9 +12,11 @@ class EnterApp extends Component {
     render() {
         return (
            
-            <div>
+            <div className="container-fluid m-0 p-0 ">
 
                
+
+               {/* contient les link switch */}
                 <Header/>
                 
                 {/* <Home/> */}

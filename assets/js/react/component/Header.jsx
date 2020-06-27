@@ -38,9 +38,7 @@ class Header extends Component {
       <>
         <BrowserRouter>
               
-            <div className="container-fluid m-0 p-0 ">
-
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-ligth ">
+                    <nav className="navbar navbar-expand-lg navbar-dark bg-ligth sticky-top">
                       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                       </button>
@@ -69,7 +67,7 @@ class Header extends Component {
               </div>
             </nav>
 
-            </div>
+
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
               
               
